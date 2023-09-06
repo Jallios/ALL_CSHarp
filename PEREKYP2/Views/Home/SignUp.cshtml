@@ -1,0 +1,63 @@
+﻿@{
+    Layout = null;
+}
+@model PEREKYP2.Models.User
+<html lang="en">
+<head>
+    <link href="~/css/REGISTRATION.css" rel="stylesheet" />
+    <title>Регистрация</title>
+</head>
+<body background="../img/1061511-vms-KPP.jpg">
+    <div class="ramka">
+          <h1>
+            Регистрация
+        </h1>
+        <form asp-action="SignUp" asp-controller="Home">
+        <p>
+            <label>Фамилия</label>
+		    <input placeholder="Фамилия" asp-for="@Model.SurnameUser" name="SurnameUser" type="text" value="">
+            <span asp-validation-for="SurnameUser"></span>
+        </p>
+         <p>
+             <label>Имя</label>
+		    <input placeholder="Имя" asp-for="@Model.NameUser" name="NameUser" type="text" value="">
+            <span asp-validation-for="NameUser"></span>
+        </p>
+         <p>
+            <label>Отчество</label>
+		    <input placeholder="Отчество" asp-for="@Model.PatronymicUser" name="PatronymicUser" type="text" value="">
+            <span asp-validation-for="PatronymicUser"></span>
+        </p>
+         <p>
+            <label>Серия и номер паспорта</label>
+		    <input placeholder="00-00-000000" asp-for="@Model.SeriNumUser" name="SeriNumUser" type="text" value="">
+            <span asp-validation-for="SeriNumUser"></span>
+        </p>
+         <p>
+            <label>Номер телефона</label>
+		    <input placeholder="+79999999999" asp-for="@Model.MobileNumberUser" name="MobileNumberUser" type="text" value="">
+            <span asp-validation-for="MobileNumberUser"></span>
+        </p>
+         <p>
+            <label>Логин</label>
+		    <input placeholder="Логин" asp-for="@Model.LoginUser" name="LoginUser" type="text" value="">
+            <span asp-validation-for="LoginUser"></span>
+        </p>
+         <p>
+            <label>Пароль</label>
+		    <input placeholder="Пароль" asp-for="@Model.PasswordUser" name="PasswordUser" type="text" value="">
+            <span asp-validation-for="PasswordUser"></span>
+        </p>
+        <p>
+             <label>Роль</label>
+		    <input placeholder="1 - Покупатель; 2 - Продавец" asp-for="@Model.UserRoleId" name="UserRoleId" type="text" value="">
+            <span asp-validation-for="UserRoleId"></span>
+        </p>
+            <button type="submit">Зарегистрироваться</button>
+	    </form>
+        <p>Если вы уже создали аккаунт. <a href="@Url.Action("SignIn")">Авторизируйтесь</a></p>
+    </div>
+    <div id="footer">
+        &copy; Все права защищены
+    </div>
+</body>

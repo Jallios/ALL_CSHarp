@@ -1,0 +1,21 @@
+﻿@model IEnumerable<TEST.Models.TestAuto>
+@{
+    ViewBag.Title = "Все пользователи";
+}
+<a asp-action = "Create">Добавить запись</a>
+<table class = "table">
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Milleage</td>
+            <td>
+                <a asp-action = "Details" asp-controller = "Home" asp-route-id = "@item.IdTestAuto">Подробнее</a>
+                <a asp-action = "Edit" asp-controller = "Home" asp-route-id = "@item.IdTestAuto">Редактировать</a>
+                <a asp-action = "Delete" asp-controller = "Home" asp-route-id = "@item.IdTestAuto">Удалить</a>
+            </td>
+
+        </tr>
+    }
+
+</table>

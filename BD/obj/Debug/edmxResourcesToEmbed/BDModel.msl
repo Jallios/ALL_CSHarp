@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище BDModelContainer" CdmEntityContainer="BDEntities">
+    <EntitySetMapping Name="Book_Storage">
+      <EntityTypeMapping TypeName="BDModel.Book_Storage">
+        <MappingFragment StoreEntitySet="Book_Storage">
+          <ScalarProperty Name="ID_Book_Storage" ColumnName="ID_Book_Storage" />
+          <ScalarProperty Name="Num_Storage" ColumnName="Num_Storage" />
+          <ScalarProperty Name="Category" ColumnName="Category" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="BDModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="ID_Employee" ColumnName="ID_Employee" />
+          <ScalarProperty Name="Full_Name_Emp" ColumnName="Full_Name_Emp" />
+          <ScalarProperty Name="Employee_Login" ColumnName="Employee_Login" />
+          <ScalarProperty Name="Employee_Password" ColumnName="Employee_Password" />
+          <ScalarProperty Name="Reading_Room_ID_E" ColumnName="Reading_Room_ID_E" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Libaries">
+      <EntityTypeMapping TypeName="BDModel.Libary">
+        <MappingFragment StoreEntitySet="Libary">
+          <ScalarProperty Name="ID_Libary" ColumnName="ID_Libary" />
+          <ScalarProperty Name="Addres" ColumnName="Addres" />
+          <ScalarProperty Name="Num_Libary" ColumnName="Num_Libary" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Readers">
+      <EntityTypeMapping TypeName="BDModel.Reader">
+        <MappingFragment StoreEntitySet="Reader">
+          <ScalarProperty Name="ID_Reader" ColumnName="ID_Reader" />
+          <ScalarProperty Name="Full_Name_Reader" ColumnName="Full_Name_Reader" />
+          <ScalarProperty Name="Reader_Birth" ColumnName="Reader_Birth" />
+          <ScalarProperty Name="Reader_Login" ColumnName="Reader_Login" />
+          <ScalarProperty Name="Reader_Password" ColumnName="Reader_Password" />
+          <ScalarProperty Name="Reader_Category_ID" ColumnName="Reader_Category_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reader_Category">
+      <EntityTypeMapping TypeName="BDModel.Reader_Category">
+        <MappingFragment StoreEntitySet="Reader_Category">
+          <ScalarProperty Name="ID_Reader_Category" ColumnName="ID_Reader_Category" />
+          <ScalarProperty Name="Name_Category" ColumnName="Name_Category" />
+          <ScalarProperty Name="Brief_Description" ColumnName="Brief_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reading_Room">
+      <EntityTypeMapping TypeName="BDModel.Reading_Room">
+        <MappingFragment StoreEntitySet="Reading_Room">
+          <ScalarProperty Name="ID_Reading_Room" ColumnName="ID_Reading_Room" />
+          <ScalarProperty Name="Num_Room" ColumnName="Num_Room" />
+          <ScalarProperty Name="Libary_ID" ColumnName="Libary_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reading_Room_Readers">
+      <EntityTypeMapping TypeName="BDModel.Reading_Room_Readers">
+        <MappingFragment StoreEntitySet="Reading_Room_Readers">
+          <ScalarProperty Name="ID_Reading_Room_Readers" ColumnName="ID_Reading_Room_Readers" />
+          <ScalarProperty Name="Reader_ID_RRR" ColumnName="Reader_ID_RRR" />
+          <ScalarProperty Name="Reading_Room_ID_RRR" ColumnName="Reading_Room_ID_RRR" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ReadRoom_Storage">
+      <EntityTypeMapping TypeName="BDModel.ReadRoom_Storage">
+        <MappingFragment StoreEntitySet="ReadRoom_Storage">
+          <ScalarProperty Name="ID_ReadRoom_Storage" ColumnName="ID_ReadRoom_Storage" />
+          <ScalarProperty Name="Book_Storage_ID" ColumnName="Book_Storage_ID" />
+          <ScalarProperty Name="Reading_Room_ID_RRS" ColumnName="Reading_Room_ID_RRS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Subscriptions">
+      <EntityTypeMapping TypeName="BDModel.Subscription">
+        <MappingFragment StoreEntitySet="Subscription">
+          <ScalarProperty Name="ID_Subscription" ColumnName="ID_Subscription" />
+          <ScalarProperty Name="Num_Subscription" ColumnName="Num_Subscription" />
+          <ScalarProperty Name="Start_Of_Use" ColumnName="Start_Of_Use" />
+          <ScalarProperty Name="End_Of_Use" ColumnName="End_Of_Use" />
+          <ScalarProperty Name="Reader_ID_S" ColumnName="Reader_ID_S" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

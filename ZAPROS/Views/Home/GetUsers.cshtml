@@ -1,0 +1,49 @@
+﻿@model ZAPROS.Models.User
+@{
+    Layout = "_Layout"; ViewBag.Title = "Get Users by Id";
+}
+
+<h2>Get Users by Id <a asp-action="Index" class="btn btn-sm btn-primary">Back</a></h2>
+<h3>@ViewBag.StatusCode</h3>
+<form asp-action="GetUsers" asp-controller="Home">
+    <div class="form-group">
+        <label for="id">Id:</label>
+        <input class="form-control"  name="id" />
+    </div>
+    <div class="text-center panel-body">
+        <button type="submit" class="btn btn-sm btn-primary">Get Users</button>
+    </div>
+</form>
+
+@if (Model != null)
+{
+    <h2>User</h2>
+    <table class="table table-sm table-striped table-bordered m-2">
+        <thead>
+            <tr>
+            <th>ID</th>
+            <th>SurnameUser</th>
+            <th>NameUser</th>
+            <th>PatronymicUser</th>
+            <th>SeriNumUser</th>
+            <th>MobileNumberUser</th>
+            <th>LoginUser</th>
+            <th>PasswordUser</th>
+            <th>UserRoleId</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.IdUser</td>
+                <td>@Model.SurnameUser</td>
+                <td>@Model.NameUser</td>
+                <td>@Model.PatronymicUser</td>
+                <td>@Model.SeriNumUser</td>
+                <td>@Model.MobileNumberUser</td>
+                <td>@Model.LoginUser</td>
+                <td>@Model.PasswordUser</td>
+                 <td>@Model.UserRoleId</td>
+            </tr>
+        </tbody>
+    </table>
+}

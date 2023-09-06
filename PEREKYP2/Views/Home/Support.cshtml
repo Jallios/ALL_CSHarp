@@ -1,0 +1,29 @@
+﻿@model PEREKYP2.Models.SupportModel
+@{
+
+	ViewBag.Title = "Поддержка";
+	<div class = "col-sm-8">
+		<div class="contact-form">
+			<h2 class="title text-center">Baшe обращение</h2>
+			<div class="status alert alert-success" style="display: none"></div>
+			<form id="main-contact-form" class="contact-form row" name="contact-form" asp-antiforgery="true" asp-action="SendMail" asp-controller="Home" method="post">
+				<div class="form-group col-nd-6">
+					<input type="text" name="name" class="form-control" required="required" placeholder="Имя"> 
+					<span asp-validation-for = "Name" />
+				</div>
+				<div class="form-group col-md-6"> 
+					<input type="email" name="email" class="form-control" required="required" placeholder="Почта">
+					<span asp-validation-for = "Email" /> 
+				</div>
+				<div class="form-group col-md-12"> 
+					<textarea name="message" id="message" required="required" class="form-control" rows="8" aceholder="Опишите проблему"></textarea>
+					<span asp-validation-for="Message" />
+				</div>
+				<div class="form-group col-nd-12">
+				<input type="submit" name="submit" class="btn btn-primary pull-right" value="Отправить"> 
+				<a class="btn btn-primary" href="@Url.Action("FIRSTPAGE")">Главная</a>
+				</div>
+			</form> 
+		</div>
+	</div>
+}

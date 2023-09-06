@@ -1,0 +1,15 @@
+﻿@model Exam.Models.Photo
+@{
+
+	ViewBag.Title = "Добавление фотографии";
+	<form asp-action = "CreatePhoto" asp-controller = "home">
+		<div class = "form-group">
+		<label asp-for="Url" class="label-control">Ссылка на картинку</label>
+		<input asp-for="Url" type="text" class = "form-control"/>
+		</div>
+		<div class = "form-group">
+		<input  type="submit" class = "btn btn-dark"/>
+		</div>
+	</form>
+
+}

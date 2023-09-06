@@ -1,0 +1,17 @@
+﻿@model PEREKYP2.Models.HistoryAuto
+@{
+
+	ViewBag.Title = "Добавление истории автомобиля";
+	<form asp-action = "CreateHistoryAuto" asp-controller = "home">
+		<div class = "form-group">
+		<label asp-for="Milleage" class="label-control">Пробег</label>
+		<input asp-for="Milleage" type="text" class = "form-control"/>
+		<label asp-for="Accidents" class="label-control">ДТП</label>
+		<input asp-for="Accidents" type="text" class = "form-control"/>
+		</div>
+		<div class = "form-group">
+		<input  type="submit" class = "btn btn-dark"/>
+		</div>
+	</form>
+
+}

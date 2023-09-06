@@ -1,0 +1,37 @@
+﻿@{
+    Layout = null;
+
+}
+@model PEREKYP2.Models.LOGINMODEL
+<html lang="en">
+<head>
+    <link href="~/css/LOGIN.css" rel="stylesheet" />
+    <title>Авторизация</title>
+</head>
+<body background="../img/1061511-vms-KPP.jpg">
+    <div class="ramka">
+        <h1>Вход</h1>
+        <form asp-antiforgery="true" asp-action="SignIn" asp-controller="Home">
+             <p>
+                  <label> Логин</label>
+             </p>
+             <p>
+                  <input asp-for="@Model.Login" name="Login" type="text" pattern="[A-z0-9.]{2,50}" minlength="2" maxlength="50" autofocus="" class="form-control" id="login" required placeholder="Введите логин">        
+                  <span asp-validation-for="Login"></span>
+             </p>
+             <p>
+                 <label>Пароль</label>
+             </p>
+             <p>
+                 <input asp-for="@Model.Password" name="Password" type="password" value="" class="form-control" id="exampleInputPassword1" placeholder="************">
+                 <span asp-validation-for="Password"></span>
+             </p>  
+                 <button type="submit">Войти</button>       
+        </form>
+        <p>У вас еще нет аккаута? <a href="@Url.Action("SignUp")">Создайте его</a></p>           
+    </div>
+    <div id="footer">
+        &copy; Все права защищены
+    </div>
+</body>
+</html>

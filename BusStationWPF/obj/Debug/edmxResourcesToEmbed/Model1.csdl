@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BusStationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Driver">
+    <Key>
+      <PropertyRef Name="ID_Driver" />
+    </Key>
+    <Property Name="ID_Driver" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="NumberRoute_ID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Route" Relationship="Self.FK_NumberRoute" FromRole="Driver" ToRole="Route" />
+  </EntityType>
+  <EntityType Name="Route">
+    <Key>
+      <PropertyRef Name="ID_Route" />
+    </Key>
+    <Property Name="ID_Route" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NumberRoute" Type="Int32" Nullable="false" />
+    <Property Name="FirstStation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LastStation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mileage" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Driver" Relationship="Self.FK_NumberRoute" FromRole="Route" ToRole="Driver" />
+  </EntityType>
+  <Association Name="FK_NumberRoute">
+    <End Role="Route" Type="Self.Route" Multiplicity="1" />
+    <End Role="Driver" Type="Self.Driver" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Route">
+        <PropertyRef Name="ID_Route" />
+      </Principal>
+      <Dependent Role="Driver">
+        <PropertyRef Name="NumberRoute_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BusStationEntities2" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Driver" EntityType="Self.Driver" />
+    <EntitySet Name="Route" EntityType="Self.Route" />
+    <AssociationSet Name="FK_NumberRoute" Association="Self.FK_NumberRoute">
+      <End Role="Route" EntitySet="Route" />
+      <End Role="Driver" EntitySet="Driver" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

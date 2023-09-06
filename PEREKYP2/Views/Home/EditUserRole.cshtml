@@ -1,0 +1,21 @@
+﻿@model PEREKYP2.Models.UserRole
+@{
+	ViewData["Title"] = "Edit";
+}
+<h1>Edit</h1>
+<h4>Users</h4>
+<hr />
+	<form asp-action="EditUserRole">
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<input type="hidden" asp-for="IdUserRole"/>
+		<div class="from-group">
+			<label asp-for="Role" class="control-label"></label>
+			<input asp-for="Role" class="form-control"/>
+		</div>
+		<div class="form-group">
+			<input type="submit" value="Save" class="btn btn-primary"/>
+		</div>
+	</form>
+	<div>
+		<a asp-action="Admin">Back to List</a>
+	</div>

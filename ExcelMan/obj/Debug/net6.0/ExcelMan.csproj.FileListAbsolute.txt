@@ -1,0 +1,5 @@
+D:\ProjectC#\ExcelMan\obj\Debug\net6.0\ExcelMan.csproj.AssemblyReference.cache
+D:\ProjectC#\ExcelMan\obj\Debug\net6.0\ExcelMan.GeneratedMSBuildEditorConfig.editorconfig
+D:\ProjectC#\ExcelMan\obj\Debug\net6.0\ExcelMan.AssemblyInfoInputs.cache
+D:\ProjectC#\ExcelMan\obj\Debug\net6.0\ExcelMan.AssemblyInfo.cs
+D:\ProjectC#\ExcelMan\obj\Debug\net6.0\ExcelMan.csproj.CoreCompileInputs.cache

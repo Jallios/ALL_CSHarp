@@ -1,0 +1,51 @@
+﻿@model IEnumerable<ZAPROS.Models.User>
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@{ Layout = "_Layout"; ViewBag.Title = "All Users";}
+
+<h2>Все пользователи</h2>
+<a asp-action="AddUsers" class="btn btn-sm btn-primary">Добавить пользователя</a>
+<a asp-action="GetUsers" class="btn btn-sm btn-secondary">Получить пользователя</a>
+<table class="table table-sm table-striped table-bordered m-2">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>SurnameUser</th>
+            <th>NameUser</th>
+            <th>PatronymicUser</th>
+            <th>SeriNumUser</th>
+            <th>MobileNumberUser</th>
+            <th>LoginUser</th>
+            <th>PasswordUser</th>
+            <th>UserRoleId</th>
+            <th>Update</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var r in Model)
+        {
+            <tr>
+                <td>@r.IdUser</td>
+                <td>@r.SurnameUser</td>
+                <td>@r.NameUser</td>
+                <td>@r.PatronymicUser</td>
+                <td>@r.SeriNumUser</td>
+                <td>@r.MobileNumberUser</td>
+                <td>@r.LoginUser</td>
+                <td>@r.PasswordUser</td>
+                 <td>@r.UserRoleId</td>
+                <td>
+                    <a asp-action="UpdateUsers" asp-route-id="@r.IdUser">
+                        <img src="/icon/edit.png" style="width: 50px; height: 50px"/>
+                    </a>
+                </td>
+                <td>
+                    <form asp-action="DeleteUsers" method="post">
+                        <input type="hidden" value="@r.IdUser" name="IdUser" />
+                        <input type="image" src="/icon/close.png" style="width: 50px; height: 50px"/>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

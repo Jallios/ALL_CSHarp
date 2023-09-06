@@ -1,0 +1,116 @@
+﻿@model PEREKYP2.Models.AdminModel
+@{
+    ViewBag.Title = "/gamemode creative";
+}
+<div>
+       <table class = "table">
+        <h1>Автомобили</h1>
+        <a asp-action = "CreateAuto">Добавить запись</a>
+         @foreach (var item in Model.autos)
+        {
+        <tr>
+            <td> @item.Brand
+             @item.IdHistoryAuto
+              @item.BodyType
+               @item.Kpp
+                @item.EnginePower
+                 @item.DriveUnit
+                  @item.WeightKg
+                   @item.YearOfIssue</td>
+            <td>
+                  <a asp-action = "EditAuto" asp-controller = "Home" asp-route-id = "@item.IdAuto">Редактировать</a>
+                  <a asp-action = "DeleteAuto" asp-controller = "Home" asp-route-id = "@item.IdAuto">Удалить</a>
+            </td>
+
+        </tr>
+        }
+        </table>
+</div>
+<div>
+       <table class = "table">
+         <h1>Пользователи</h1>
+         <a asp-action = "CreateUser">Добавить запись</a>
+         @foreach (var item in Model.users)
+        {
+        <tr>
+            <td> 
+                @item.NameUser
+                @item.SurnameUser
+                @item.PatronymicUser
+                @item.SeriNumUser
+                @item.MobileNumberUser
+                @item.LoginUser
+                @item.PasswordUser
+                @item.UserRoleId
+            </td>
+            <td>
+                <a asp-action = "EditUser" asp-controller = "Home" asp-route-id = "@item.IdUser">Редактировать</a>
+                <a asp-action = "DeleteUser" asp-controller = "Home" asp-route-id = "@item.IdUser">Удалить</a>
+            </td>
+
+        </tr>
+        }
+        </table>
+</div>
+<div>
+       <table class = "table">
+        <h1>Роли</h1>
+        <a asp-action = "CreateUserRole">Добавить запись</a>
+         @foreach (var item in Model.userRoles)
+        {
+        <tr>
+            <td> 
+             @item.Role
+            </td>
+            <td>
+                <a asp-action = "EditUserRole" asp-controller = "Home" asp-route-id = "@item.IdUserRole">Редактировать</a>
+                <a asp-action = "DeleteUserRole" asp-controller = "Home" asp-route-id = "@item.IdUserRole">Удалить</a>
+            </td>
+
+        </tr>
+        }
+        </table>
+</div>
+<div>
+       <table class = "table">
+        <h1>История автомобиля</h1>
+        <a asp-action = "CreateHistoryAuto">Добавить запись</a>
+         @foreach (var item in Model.historyAutos)
+        {
+        <tr>
+            <td> 
+                @item.Milleage
+                @item.Accidents
+            </td>
+            <td>
+                <a asp-action = "EditHistoryAuto" asp-controller = "Home" asp-route-id = "@item.IdHistoryAuto">Редактировать</a>
+                <a asp-action = "DeleteHistoryAuto" asp-controller = "Home" asp-route-id = "@item.IdHistoryAuto">Удалить</a>
+            </td>
+
+        </tr>
+        }
+        </table>
+</div>
+<div>
+       <table class = "table">
+        <h1>Статус сделки</h1>
+         <a asp-action = "CreatePurchaseStatus">Добавить запись</a>
+         @foreach (var item in Model.purchaseStatuses)
+        {
+        <tr>
+            <td> 
+                @item.PurchaseStatus1
+                @item.AutoId
+                @item.UserId
+
+            </td>
+            <td>
+                <a asp-action = "EditPurchaseStatus" asp-controller = "Home" asp-route-id = "@item.IdPurchaseStatus">Редактировать</a>
+                <a asp-action = "DeletepurchaseStatus" asp-controller = "Home" asp-route-id = "@item.IdPurchaseStatus">Удалить</a>
+            </td>
+
+        </tr>
+        }
+        </table>
+</div>
+   

@@ -1,0 +1,50 @@
+﻿@{
+	Layout = null;
+}
+@model Perekyp.Models.Buyer
+<html lang="en">
+<head>
+    <link href="~/css/REGISTRATION.css" rel="stylesheet" />
+    <title>Регистрация</title>
+</head>
+<body background="../img/1061511-vms-KPP.jpg">
+    <div class="ramka">
+          <h1>
+            Регистрация
+        </h1>
+        <form asp-action = "SignUp" asp-controller = "Home">
+        <p>
+            <label asp-for="NameBuyer" class="label-control">Пробег</label>
+		<input asp-for="NameBuyer" type="text" class = "form-control"/>
+        </p>
+         <p>
+            <label asp-for="SurnameBuyer" class="label-control">Пробег</label>
+		<input asp-for="SurnameBuyer" type="text" class = "form-control"/>
+        </p>
+         <p>
+            <label asp-for="PatronymicBuyer" class="label-control">Пробег</label>
+		<input asp-for="PatronymicBuyer" type="text" class = "form-control"/>
+        </p>
+         <p>
+            <label asp-for="SeriNumBuyer" class="label-control">Пробег</label>
+		<input asp-for="SeriNumBuyer" type="text" class = "form-control"/>
+        </p>
+         <p>
+            <label asp-for="MobileNumberBuyer" class="label-control">Пробег</label>
+		<input asp-for="MobileNumberBuyer" type="text" class = "form-control"/>
+        </p>
+         <p>
+            <label asp-for="LoginBuyer" class="label-control">Пробег</label>
+		<input asp-for="LoginBuyer" type="text" class = "form-control"/>
+        </p>
+         <p>
+            <label asp-for="PasswordBuyer" class="label-control">Пробег</label>
+		<input asp-for="PasswordBuyer" type="text" class = "form-control"/>
+        </p>
+            <input  type="submit" class = "btn btn-dark"/>
+	    </form>
+    </div>
+    <div id="footer">
+        &copy; Все права защищены
+    </div>
+</body>

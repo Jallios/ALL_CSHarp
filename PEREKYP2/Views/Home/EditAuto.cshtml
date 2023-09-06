@@ -1,0 +1,36 @@
+﻿@model PEREKYP2.Models.Auto
+@{
+	ViewData["Title"] = "Edit";
+}
+<h1>Edit</h1>
+<h4>Users</h4>
+<hr />
+	<form asp-action="EditAuto">
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<input type="hidden" asp-for="IdAuto"/>
+		<div class="from-group">
+			<label asp-for="Brand" class="control-label"></label>
+			<input asp-for="Brand" class="form-control"/>
+			<label asp-for="IdHistoryAuto" class="control-label"></label>
+			<input asp-for="IdHistoryAuto" class="form-control"/>
+			<label asp-for="BodyType" class="control-label"></label>
+			<input asp-for="BodyType" class="form-control"/>
+			<label asp-for="Kpp" class="control-label"></label>
+			<input asp-for="Kpp" class="form-control"/>
+			<label asp-for="EnginePower" class="control-label"></label>
+			<input asp-for="EnginePower" class="form-control"/>
+			<label asp-for="DriveUnit" class="control-label"></label>
+			<input asp-for="DriveUnit" class="form-control"/>
+			<label asp-for="WeightKg" class="control-label"></label>
+			<input asp-for="WeightKg" class="form-control"/>
+			<label asp-for="YearOfIssue" class="control-label"></label>
+			<input asp-for="YearOfIssue" class="form-control"/>
+
+		</div>
+		<div class="form-group">
+			<input type="submit" value="Save" class="btn btn-primary"/>
+		</div>
+	</form>
+	<div>
+		<a asp-action="Admin">Back to List</a>
+	</div>

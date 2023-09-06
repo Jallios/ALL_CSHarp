@@ -1,0 +1,11 @@
+D:\ProjectC#\EducationalInstitution\bin\Debug\EducationalInstitution.exe.config
+D:\ProjectC#\EducationalInstitution\bin\Debug\EducationalInstitution.exe
+D:\ProjectC#\EducationalInstitution\bin\Debug\EducationalInstitution.pdb
+D:\ProjectC#\EducationalInstitution\bin\Debug\ClassLibrary.dll
+D:\ProjectC#\EducationalInstitution\bin\Debug\ClassLibrary.pdb
+D:\ProjectC#\EducationalInstitution\obj\Debug\EducationalInstitution.csproj.AssemblyReference.cache
+D:\ProjectC#\EducationalInstitution\obj\Debug\EducationalInstitution.csproj.SuggestedBindingRedirects.cache
+D:\ProjectC#\EducationalInstitution\obj\Debug\EducationalInstitution.csproj.CoreCompileInputs.cache
+D:\ProjectC#\EducationalInstitution\obj\Debug\EducationalInstitution.csproj.CopyComplete
+D:\ProjectC#\EducationalInstitution\obj\Debug\EducationalInstitution.exe
+D:\ProjectC#\EducationalInstitution\obj\Debug\EducationalInstitution.pdb

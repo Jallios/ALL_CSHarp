@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a05ead29-323e-4138-bb92-d405217c98e2": {
+      "ProjectGuid": "a05ead29-323e-4138-bb92-d405217c98e2",
+      "DisplayName": "PlaneBuilder",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

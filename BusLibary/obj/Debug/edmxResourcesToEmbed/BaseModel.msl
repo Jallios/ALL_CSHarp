@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище BusStationModelContainer" CdmEntityContainer="BusStationEntities">
+    <EntitySetMapping Name="Driver">
+      <EntityTypeMapping TypeName="BusStationModel.Driver">
+        <MappingFragment StoreEntitySet="Driver">
+          <ScalarProperty Name="ID_Driver" ColumnName="ID_Driver" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Surname" ColumnName="Surname" />
+          <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+          <ScalarProperty Name="NumberRoute_ID" ColumnName="NumberRoute_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Route">
+      <EntityTypeMapping TypeName="BusStationModel.Route">
+        <MappingFragment StoreEntitySet="Route">
+          <ScalarProperty Name="ID_Route" ColumnName="ID_Route" />
+          <ScalarProperty Name="NumberRoute" ColumnName="NumberRoute" />
+          <ScalarProperty Name="FirstStation" ColumnName="FirstStation" />
+          <ScalarProperty Name="LastStation" ColumnName="LastStation" />
+          <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

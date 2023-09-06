@@ -1,0 +1,75 @@
+﻿body {
+    margin: 0%;
+}
+
+#header {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    text-align: center;
+    border-radius: 3%;
+    backdrop-filter: blur(1px);
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+#header img {
+    width: 100px;
+    height: 100px;
+}
+
+.navigathion {
+    width: 100%;
+    height: 5%;
+}
+
+.navigathion input {
+    width: 33%;
+    height: 50%;
+}
+
+
+.main {
+    height: 70%;
+    width: 75%;
+    margin-left: 12%;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 3%;
+    backdrop-filter: blur(1px);
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    font-size: 20px;
+    padding-left: 2%;
+}
+
+    .main p {
+        text-align: center;
+        color: white;
+        width: 60%;
+        height: 30%;
+        padding-left: 20%;
+    }
+.main p img {
+        width: 450px;
+        height: 220px;
+        border-radius: 5%;
+}
+
+#footer {
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-radius: 3%;
+    backdrop-filter: blur(1px);
+    background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.5));
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    position: absolute;
+    bottom: 0;
+}

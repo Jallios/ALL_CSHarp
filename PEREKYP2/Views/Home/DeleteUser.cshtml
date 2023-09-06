@@ -1,0 +1,26 @@
+﻿@model PEREKYP2.Models.User
+@{
+	ViewBag.Title = "Удаление записи";
+}
+<div>
+	<dl class="dl-horizontal">
+		<dt>Запись</dt>
+		<dd>
+			@Html.DisplayFor(model => model.NameUser)
+			@Html.DisplayFor(model => model.SurnameUser)
+			@Html.DisplayFor(model => model.PatronymicUser)
+			@Html.DisplayFor(model => model.SeriNumUser)
+			@Html.DisplayFor(model => model.MobileNumberUser)
+			@Html.DisplayFor(model => model.LoginUser)
+			@Html.DisplayFor(model => model.PasswordUser)
+			@Html.DisplayFor(model => model.UserRoleId)
+		</dd>
+	</dl>
+	<div>
+		<form asp-controller="Home" asp-action="DeleteUser" method="post">
+			<div class="form-group">
+				<input type="submit" class = "btn btn-dark" value="Удалить" />
+			</div>
+		</form>
+	</div>
+</div>

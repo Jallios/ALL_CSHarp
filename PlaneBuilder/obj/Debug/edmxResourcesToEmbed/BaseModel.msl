@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище PlaneBuilderModelContainer" CdmEntityContainer="PlaneBuilderEntities">
+    <EntitySetMapping Name="Appointment_Research_Laboratory">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Appointment_Research_Laboratory">
+        <MappingFragment StoreEntitySet="Appointment_Research_Laboratory">
+          <ScalarProperty Name="ID_Appointment" ColumnName="ID_Appointment" />
+          <ScalarProperty Name="Name_Appointment" ColumnName="Name_Appointment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Areas">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Area">
+        <MappingFragment StoreEntitySet="Area">
+          <ScalarProperty Name="ID_Area" ColumnName="ID_Area" />
+          <ScalarProperty Name="Address_Area" ColumnName="Address_Area" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Brigades">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Brigade">
+        <MappingFragment StoreEntitySet="Brigade">
+          <ScalarProperty Name="ID_Brigade" ColumnName="ID_Brigade" />
+          <ScalarProperty Name="ID_Workshop" ColumnName="ID_Workshop" />
+          <ScalarProperty Name="ID_Process" ColumnName="ID_Process" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="ID_Employee" ColumnName="ID_Employee" />
+          <ScalarProperty Name="Surname_Employee" ColumnName="Surname_Employee" />
+          <ScalarProperty Name="ID_Brigade" ColumnName="ID_Brigade" />
+          <ScalarProperty Name="ID_Laboratory" ColumnName="ID_Laboratory" />
+          <ScalarProperty Name="ID_Post" ColumnName="ID_Post" />
+          <ScalarProperty Name="Name_Employee" ColumnName="Name_Employee" />
+          <ScalarProperty Name="Patronymic_Employee" ColumnName="Patronymic_Employee" />
+          <ScalarProperty Name="Salary_Employee" ColumnName="Salary_Employee" />
+          <ScalarProperty Name="Login_Employee" ColumnName="Login_Employee" />
+          <ScalarProperty Name="Password_Employee" ColumnName="Password_Employee" />
+          <ScalarProperty Name="Status_Employee" ColumnName="Status_Employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_History">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Employee_History">
+        <MappingFragment StoreEntitySet="Employee_History">
+          <ScalarProperty Name="ID_Employee_History" ColumnName="ID_Employee_History" />
+          <ScalarProperty Name="Acting_On_Employee" ColumnName="Acting_On_Employee" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturing_History">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Manufacturing_History">
+        <MappingFragment StoreEntitySet="Manufacturing_History">
+          <ScalarProperty Name="ID_Manufacturing_History" ColumnName="ID_Manufacturing_History" />
+          <ScalarProperty Name="Acting_On_Manufacturing" ColumnName="Acting_On_Manufacturing" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Manufacturing_Process">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Manufacturing_Process">
+        <MappingFragment StoreEntitySet="Manufacturing_Process">
+          <ScalarProperty Name="ID_Process" ColumnName="ID_Process" />
+          <ScalarProperty Name="Name_Process" ColumnName="Name_Process" />
+          <ScalarProperty Name="Status_Process" ColumnName="Status_Process" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Materials">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Material">
+        <MappingFragment StoreEntitySet="Material">
+          <ScalarProperty Name="ID_Material" ColumnName="ID_Material" />
+          <ScalarProperty Name="Name_Material" ColumnName="Name_Material" />
+          <ScalarProperty Name="ID_Workshop" ColumnName="ID_Workshop" />
+          <ScalarProperty Name="Count_Material" ColumnName="Count_Material" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Posts">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Post">
+        <MappingFragment StoreEntitySet="Post">
+          <ScalarProperty Name="ID_Post" ColumnName="ID_Post" />
+          <ScalarProperty Name="Name_Post" ColumnName="Name_Post" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Products">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ID_Product" ColumnName="ID_Product" />
+          <ScalarProperty Name="Name_Product" ColumnName="Name_Product" />
+          <ScalarProperty Name="ID_Material" ColumnName="ID_Material" />
+          <ScalarProperty Name="ID_Type" ColumnName="ID_Type" />
+          <ScalarProperty Name="ID_Laboratory" ColumnName="ID_Laboratory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product_Type">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Product_Type">
+        <MappingFragment StoreEntitySet="Product_Type">
+          <ScalarProperty Name="ID_Type" ColumnName="ID_Type" />
+          <ScalarProperty Name="Name_Type" ColumnName="Name_Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Researches">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Research">
+        <MappingFragment StoreEntitySet="Research">
+          <ScalarProperty Name="ID_Research" ColumnName="ID_Research" />
+          <ScalarProperty Name="Name_Research" ColumnName="Name_Research" />
+          <ScalarProperty Name="ID_Result" ColumnName="ID_Result" />
+          <ScalarProperty Name="ID_Status" ColumnName="ID_Status" />
+          <ScalarProperty Name="ID_Laboratory" ColumnName="ID_Laboratory" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Research_Laboratory">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Research_Laboratory">
+        <MappingFragment StoreEntitySet="Research_Laboratory">
+          <ScalarProperty Name="ID_Laboratory" ColumnName="ID_Laboratory" />
+          <ScalarProperty Name="Name_Laboratory" ColumnName="Name_Laboratory" />
+          <ScalarProperty Name="ID_Appointment" ColumnName="ID_Appointment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Result_Research">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Result_Research">
+        <MappingFragment StoreEntitySet="Result_Research">
+          <ScalarProperty Name="ID_Result" ColumnName="ID_Result" />
+          <ScalarProperty Name="Name_Result" ColumnName="Name_Result" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status_Research">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Status_Research">
+        <MappingFragment StoreEntitySet="Status_Research">
+          <ScalarProperty Name="ID_Status" ColumnName="ID_Status" />
+          <ScalarProperty Name="Name_Status" ColumnName="Name_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Workshops">
+      <EntityTypeMapping TypeName="PlaneBuilderModel.Workshop">
+        <MappingFragment StoreEntitySet="Workshop">
+          <ScalarProperty Name="ID_Workshop" ColumnName="ID_Workshop" />
+          <ScalarProperty Name="Name_Workshop" ColumnName="Name_Workshop" />
+          <ScalarProperty Name="ID_Area" ColumnName="ID_Area" />
+          <ScalarProperty Name="Location_Workshop" ColumnName="Location_Workshop" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,6 @@
+D:\ProjectC#\Calculate_UnitTest\bin\Debug\Calculate_UnitTest.dll
+D:\ProjectC#\Calculate_UnitTest\bin\Debug\Calculate_UnitTest.pdb
+D:\ProjectC#\Calculate_UnitTest\obj\Debug\CalculateUnitTest.csproj.AssemblyReference.cache
+D:\ProjectC#\Calculate_UnitTest\obj\Debug\CalculateUnitTest.csproj.CoreCompileInputs.cache
+D:\ProjectC#\Calculate_UnitTest\obj\Debug\Calculate_UnitTest.dll
+D:\ProjectC#\Calculate_UnitTest\obj\Debug\Calculate_UnitTest.pdb

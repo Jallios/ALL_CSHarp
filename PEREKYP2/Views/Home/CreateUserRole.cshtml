@@ -1,0 +1,15 @@
+﻿@model PEREKYP2.Models.UserRole
+@{
+
+	ViewBag.Title = "Добавление роли";
+	<form asp-action = "CreateUserRole" asp-controller = "home">
+		<div class = "form-group">
+		<label asp-for="Role" class="label-control">Роль</label>
+		<input asp-for="Role" type="text" class = "form-control"/>
+		</div>
+		<div class = "form-group">
+		<input  type="submit" class = "btn btn-dark"/>
+		</div>
+	</form>
+
+}

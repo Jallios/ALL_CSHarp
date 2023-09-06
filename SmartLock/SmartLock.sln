@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartLock", "SmartLock.csproj", "{EB055DDB-31F1-4039-BB07-B0D6FDA14C12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB055DDB-31F1-4039-BB07-B0D6FDA14C12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB055DDB-31F1-4039-BB07-B0D6FDA14C12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB055DDB-31F1-4039-BB07-B0D6FDA14C12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB055DDB-31F1-4039-BB07-B0D6FDA14C12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1A7D9C4-F89F-42DE-B583-9B1075A86835}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "FlY9YzMxI6FfX0KPkNoKjrXHk041Xo5ehLb2g1OUhySlC29BYeuOO0IzYE7CYmAK1VlOA/8b5Hj9AernBm3Shg==",
+  "success": true,
+  "projectFilePath": "D:\\ProjectC#\\ConsoleApp1\\ConsoleApp1.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ffuruff\\.nuget\\packages\\microsoft.office.interop.excel\\15.0.4795.1001\\microsoft.office.interop.excel.15.0.4795.1001.nupkg.sha512"
+  ],
+  "logs": []
+}

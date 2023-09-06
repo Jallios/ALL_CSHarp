@@ -1,0 +1,43 @@
+﻿<Window x:Class="PlaneBuilder.ResearchR"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PlaneBuilder"
+        mc:Ignorable="d"
+        Title="Research" Height="450" Width="800" IsVisibleChanged="Window_IsVisibleChanged">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2" Content="Окно просмотра иследования" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="20"/>
+        <DataGrid Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3" Grid.RowSpan="2" x:Name="dtgResearch" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Название процесса " Binding="{Binding Name_Research}"/>
+                <DataGridTextColumn Header="Статус процесса" Binding="{Binding Result_Research.Name_Result}"/>
+                <DataGridTextColumn Header="Название процесса " Binding="{Binding Status_Research.Name_Status}"/>
+                <DataGridTextColumn Header="Статус процесса" Binding="{Binding Research_Laboratory.Name_Laboratory}"/>
+                <DataGridTemplateColumn Width="100">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Изменить" x:Name="btnRed" Click="btnRed_Click"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Grid.Column="3" Grid.Row="1" VerticalAlignment="Center" FontSize="20" Content="Добавить"  x:Name="btnAdd" Click="btnAdd_Click"/>
+        <Button Grid.Column="3" Grid.Row="2" VerticalAlignment="Top" FontSize="20" Content="Удалить"  x:Name="btnDel" Click="btnDel_Click"/>
+        <Button Grid.Column="3" Grid.Row="4"  VerticalAlignment="Center" FontSize="20" Content="Назад" x:Name="btnBack" Click="btnBack_Click"/>
+    </Grid>
+</Window>

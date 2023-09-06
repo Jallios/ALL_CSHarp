@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "b8a1cf63-0c20-43b5-a8da-0b17a490efa8": {
+      "ProjectGuid": "b8a1cf63-0c20-43b5-a8da-0b17a490efa8",
+      "DisplayName": "ExcelMan",
+      "ColorIndex": 0
+    },
+    "a6e7109d-718a-499d-a649-20697f0f5e03": {
+      "ProjectGuid": "a6e7109d-718a-499d-a649-20697f0f5e03",
+      "DisplayName": "ExcelTest",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

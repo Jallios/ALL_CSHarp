@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "511186c5-6c01-4a73-ac89-7d668e1a4790": {
+      "ProjectGuid": "511186c5-6c01-4a73-ac89-7d668e1a4790",
+      "DisplayName": "BusStation",
+      "ColorIndex": 0
+    },
+    "550edda2-5ea9-43e3-ba36-90b479a33bdd": {
+      "ProjectGuid": "550edda2-5ea9-43e3-ba36-90b479a33bdd",
+      "DisplayName": "BusStationTest",
+      "ColorIndex": 1
+    },
+    "cc720551-c58f-4bd9-84a0-2cea82490156": {
+      "ProjectGuid": "cc720551-c58f-4bd9-84a0-2cea82490156",
+      "DisplayName": "BusStationWPF",
+      "ColorIndex": 2
+    },
+    "93de632c-04e5-4130-a423-bb0b54f69aac": {
+      "ProjectGuid": "93de632c-04e5-4130-a423-bb0b54f69aac",
+      "DisplayName": "BusStationClass",
+      "ColorIndex": 3
+    },
+    "25792d1b-e046-4f8f-bbf5-00efe7dc11f8": {
+      "ProjectGuid": "25792d1b-e046-4f8f-bbf5-00efe7dc11f8",
+      "DisplayName": "BusLibary",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}

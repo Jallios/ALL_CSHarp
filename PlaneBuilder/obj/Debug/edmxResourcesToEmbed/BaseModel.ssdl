@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище PlaneBuilderModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Appointment_Research_Laboratory">
+    <Key>
+      <PropertyRef Name="ID_Appointment" />
+    </Key>
+    <Property Name="ID_Appointment" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Appointment" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Area">
+    <Key>
+      <PropertyRef Name="ID_Area" />
+    </Key>
+    <Property Name="ID_Area" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Address_Area" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Brigade">
+    <Key>
+      <PropertyRef Name="ID_Brigade" />
+    </Key>
+    <Property Name="ID_Brigade" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ID_Workshop" Type="int" Nullable="false" />
+    <Property Name="ID_Process" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID_Employee" />
+    </Key>
+    <Property Name="ID_Employee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Surname_Employee" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_Brigade" Type="int" />
+    <Property Name="ID_Laboratory" Type="int" Nullable="false" />
+    <Property Name="ID_Post" Type="int" Nullable="false" />
+    <Property Name="Name_Employee" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Patronymic_Employee" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Salary_Employee" Type="int" Nullable="false" />
+    <Property Name="Login_Employee" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password_Employee" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status_Employee" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee_History">
+    <Key>
+      <PropertyRef Name="ID_Employee_History" />
+    </Key>
+    <Property Name="ID_Employee_History" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Acting_On_Employee" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Manufacturing_History">
+    <Key>
+      <PropertyRef Name="ID_Manufacturing_History" />
+    </Key>
+    <Property Name="ID_Manufacturing_History" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Acting_On_Manufacturing" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Manufacturing_Process">
+    <Key>
+      <PropertyRef Name="ID_Process" />
+    </Key>
+    <Property Name="ID_Process" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Process" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Status_Process" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Material">
+    <Key>
+      <PropertyRef Name="ID_Material" />
+    </Key>
+    <Property Name="ID_Material" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Material" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_Workshop" Type="int" Nullable="false" />
+    <Property Name="Count_Material" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="ID_Post" />
+    </Key>
+    <Property Name="ID_Post" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Post" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="ID_Product" />
+    </Key>
+    <Property Name="ID_Product" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Product" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_Material" Type="int" Nullable="false" />
+    <Property Name="ID_Type" Type="int" Nullable="false" />
+    <Property Name="ID_Laboratory" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Product_Type">
+    <Key>
+      <PropertyRef Name="ID_Type" />
+    </Key>
+    <Property Name="ID_Type" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Type" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Research">
+    <Key>
+      <PropertyRef Name="ID_Research" />
+    </Key>
+    <Property Name="ID_Research" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Research" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_Result" Type="int" Nullable="false" />
+    <Property Name="ID_Status" Type="int" Nullable="false" />
+    <Property Name="ID_Laboratory" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Research_Laboratory">
+    <Key>
+      <PropertyRef Name="ID_Laboratory" />
+    </Key>
+    <Property Name="ID_Laboratory" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Laboratory" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_Appointment" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Result_Research">
+    <Key>
+      <PropertyRef Name="ID_Result" />
+    </Key>
+    <Property Name="ID_Result" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Result" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Status_Research">
+    <Key>
+      <PropertyRef Name="ID_Status" />
+    </Key>
+    <Property Name="ID_Status" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Status" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Workshop">
+    <Key>
+      <PropertyRef Name="ID_Workshop" />
+    </Key>
+    <Property Name="ID_Workshop" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Workshop" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="ID_Area" Type="int" Nullable="false" />
+    <Property Name="Location_Workshop" Type="varchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Appointment">
+    <End Role="Appointment_Research_Laboratory" Type="Self.Appointment_Research_Laboratory" Multiplicity="1" />
+    <End Role="Research_Laboratory" Type="Self.Research_Laboratory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Appointment_Research_Laboratory">
+        <PropertyRef Name="ID_Appointment" />
+      </Principal>
+      <Dependent Role="Research_Laboratory">
+        <PropertyRef Name="ID_Appointment" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Area">
+    <End Role="Area" Type="Self.Area" Multiplicity="1" />
+    <End Role="Workshop" Type="Self.Workshop" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Area">
+        <PropertyRef Name="ID_Area" />
+      </Principal>
+      <Dependent Role="Workshop">
+        <PropertyRef Name="ID_Area" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Brigade">
+    <End Role="Brigade" Type="Self.Brigade" Multiplicity="0..1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Brigade">
+        <PropertyRef Name="ID_Brigade" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="ID_Brigade" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Laboratory">
+    <End Role="Research_Laboratory" Type="Self.Research_Laboratory" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Research_Laboratory">
+        <PropertyRef Name="ID_Laboratory" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ID_Laboratory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Laboratory_E">
+    <End Role="Research_Laboratory" Type="Self.Research_Laboratory" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Research_Laboratory">
+        <PropertyRef Name="ID_Laboratory" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="ID_Laboratory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Laboratory_R">
+    <End Role="Research_Laboratory" Type="Self.Research_Laboratory" Multiplicity="1" />
+    <End Role="Research" Type="Self.Research" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Research_Laboratory">
+        <PropertyRef Name="ID_Laboratory" />
+      </Principal>
+      <Dependent Role="Research">
+        <PropertyRef Name="ID_Laboratory" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Material">
+    <End Role="Material" Type="Self.Material" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Material">
+        <PropertyRef Name="ID_Material" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ID_Material" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Post">
+    <End Role="Post" Type="Self.Post" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Post">
+        <PropertyRef Name="ID_Post" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="ID_Post" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Process">
+    <End Role="Manufacturing_Process" Type="Self.Manufacturing_Process" Multiplicity="1" />
+    <End Role="Brigade" Type="Self.Brigade" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Manufacturing_Process">
+        <PropertyRef Name="ID_Process" />
+      </Principal>
+      <Dependent Role="Brigade">
+        <PropertyRef Name="ID_Process" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Result">
+    <End Role="Result_Research" Type="Self.Result_Research" Multiplicity="1" />
+    <End Role="Research" Type="Self.Research" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Result_Research">
+        <PropertyRef Name="ID_Result" />
+      </Principal>
+      <Dependent Role="Research">
+        <PropertyRef Name="ID_Result" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Status">
+    <End Role="Status_Research" Type="Self.Status_Research" Multiplicity="1" />
+    <End Role="Research" Type="Self.Research" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status_Research">
+        <PropertyRef Name="ID_Status" />
+      </Principal>
+      <Dependent Role="Research">
+        <PropertyRef Name="ID_Status" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Type">
+    <End Role="Product_Type" Type="Self.Product_Type" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product_Type">
+        <PropertyRef Name="ID_Type" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="ID_Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workshop">
+    <End Role="Workshop" Type="Self.Workshop" Multiplicity="1" />
+    <End Role="Brigade" Type="Self.Brigade" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workshop">
+        <PropertyRef Name="ID_Workshop" />
+      </Principal>
+      <Dependent Role="Brigade">
+        <PropertyRef Name="ID_Workshop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Workshop_M">
+    <End Role="Workshop" Type="Self.Workshop" Multiplicity="1" />
+    <End Role="Material" Type="Self.Material" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Workshop">
+        <PropertyRef Name="ID_Workshop" />
+      </Principal>
+      <Dependent Role="Material">
+        <PropertyRef Name="ID_Workshop" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище PlaneBuilderModelContainer">
+    <EntitySet Name="Appointment_Research_Laboratory" EntityType="Self.Appointment_Research_Laboratory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Area" EntityType="Self.Area" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Brigade" EntityType="Self.Brigade" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee_History" EntityType="Self.Employee_History" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manufacturing_History" EntityType="Self.Manufacturing_History" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Manufacturing_Process" EntityType="Self.Manufacturing_Process" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Material" EntityType="Self.Material" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Post" EntityType="Self.Post" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Product_Type" EntityType="Self.Product_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Research" EntityType="Self.Research" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Research_Laboratory" EntityType="Self.Research_Laboratory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Result_Research" EntityType="Self.Result_Research" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Status_Research" EntityType="Self.Status_Research" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Workshop" EntityType="Self.Workshop" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Appointment" Association="Self.FK_Appointment">
+      <End Role="Appointment_Research_Laboratory" EntitySet="Appointment_Research_Laboratory" />
+      <End Role="Research_Laboratory" EntitySet="Research_Laboratory" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Area" Association="Self.FK_Area">
+      <End Role="Area" EntitySet="Area" />
+      <End Role="Workshop" EntitySet="Workshop" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Brigade" Association="Self.FK_Brigade">
+      <End Role="Brigade" EntitySet="Brigade" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Laboratory" Association="Self.FK_Laboratory">
+      <End Role="Research_Laboratory" EntitySet="Research_Laboratory" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Laboratory_E" Association="Self.FK_Laboratory_E">
+      <End Role="Research_Laboratory" EntitySet="Research_Laboratory" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Laboratory_R" Association="Self.FK_Laboratory_R">
+      <End Role="Research_Laboratory" EntitySet="Research_Laboratory" />
+      <End Role="Research" EntitySet="Research" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Material" Association="Self.FK_Material">
+      <End Role="Material" EntitySet="Material" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Post" Association="Self.FK_Post">
+      <End Role="Post" EntitySet="Post" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Process" Association="Self.FK_Process">
+      <End Role="Manufacturing_Process" EntitySet="Manufacturing_Process" />
+      <End Role="Brigade" EntitySet="Brigade" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Result" Association="Self.FK_Result">
+      <End Role="Result_Research" EntitySet="Result_Research" />
+      <End Role="Research" EntitySet="Research" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Status" Association="Self.FK_Status">
+      <End Role="Status_Research" EntitySet="Status_Research" />
+      <End Role="Research" EntitySet="Research" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Type" Association="Self.FK_Type">
+      <End Role="Product_Type" EntitySet="Product_Type" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workshop" Association="Self.FK_Workshop">
+      <End Role="Workshop" EntitySet="Workshop" />
+      <End Role="Brigade" EntitySet="Brigade" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Workshop_M" Association="Self.FK_Workshop_M">
+      <End Role="Workshop" EntitySet="Workshop" />
+      <End Role="Material" EntitySet="Material" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

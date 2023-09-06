@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "5bdba6f0-42ff-4712-b60c-7bfe3c49ea75": {
+      "ProjectGuid": "5bdba6f0-42ff-4712-b60c-7bfe3c49ea75",
+      "DisplayName": "Zoo_API",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

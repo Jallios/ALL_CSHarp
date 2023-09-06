@@ -1,0 +1,14 @@
+﻿@model IEnumerable<Exam.Models.Photo>
+@{
+    <a class="btn btn-primary" href="@Url.Action("CreatePhoto")">Добавить</a>
+	<div>  
+    @foreach (var item in Model)
+    {
+        <ul class="card-wrapper">
+            <li class="card">
+            @item.Url
+            </li>
+        </ul>
+    }
+    </div>
+}

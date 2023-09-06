@@ -1,0 +1,108 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d" Closing="Window_Closing" Title="ТЯЖЕЛО" Height="550" Width="450">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2*"></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.3*"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="0.3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Content="Подключение к замку"
+            Grid.Column="0"
+            Grid.Row="0"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            FontSize="25"></Label>
+        <ComboBox x:Name="cbCom"
+            Grid.Column="0"
+            Grid.Row="1"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            FontSize="25" Loaded="cbCom_Loaded">
+        </ComboBox>
+        <Button x:Name="btFound"
+            Content="Найти"
+            FontSize="25"
+            Grid.Column="1"
+            Grid.Row="1" Click="btFound_Click">
+        </Button>
+        <Label x:Name="lbCheck"
+            Content="Arduino отключено"
+            FontSize="25"
+            Grid.Column="0"
+            Grid.Row="2"
+            Grid.ColumnSpan="2"
+            VerticalAlignment="Center"
+            HorizontalContentAlignment="Center"
+            Background="LightCoral"
+            BorderThickness="3"
+            BorderBrush="Gray">
+        </Label>
+        <Label Content="Управление замком"
+            Grid.Column="0"
+            Grid.Row="4"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            Grid.ColumnSpan="2"
+            FontSize="25">
+        </Label>
+        <Button x:Name="btOpen"
+            Content="Открыть дверь"
+            FontSize="25"
+            Grid.Column="0"
+            Grid.Row="5"
+            Grid.ColumnSpan="2" Click="btOpen_Click">
+        </Button>
+        <Button x:Name="btClose"
+            Content="Закрыть дверь"
+            FontSize="25"
+            Grid.Column="0"
+            Grid.Row="6"
+            Grid.ColumnSpan="2"
+            IsEnabled="False" Click="btClose_Click">
+        </Button>
+        <Label Content="Закрыть через определённое время"
+            Grid.Column="0"
+            Grid.Row="7"
+            Grid.ColumnSpan="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Bottom"
+            FontSize="25">
+        </Label>
+        <Button x:Name="btCloseAfter"
+            Content="Закрыть дверь через"
+            Grid.Column="0"
+            Grid.Row="8"
+            FontSize="25" Click="btCloseAfter_Click_1">
+        </Button>
+        <ComboBox x:Name="cbSec"
+            Grid.Column="1"
+            Grid.Row="8"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            FontSize="25">
+            <ComboBoxItem Content="1"></ComboBoxItem>
+            <ComboBoxItem Content="2"></ComboBoxItem>
+            <ComboBoxItem Content="3"></ComboBoxItem>
+            <ComboBoxItem Content="4"></ComboBoxItem>
+            <ComboBoxItem Content="5"></ComboBoxItem>
+        </ComboBox>
+        
+    </Grid>
+</Window>

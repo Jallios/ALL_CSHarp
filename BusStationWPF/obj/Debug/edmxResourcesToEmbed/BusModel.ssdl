@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище BusStationModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Driver">
+    <Key>
+      <PropertyRef Name="ID_Driver" />
+    </Key>
+    <Property Name="ID_Driver" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Surname" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Patronymic" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="NumberRoute_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Route">
+    <Key>
+      <PropertyRef Name="ID_Route" />
+    </Key>
+    <Property Name="ID_Route" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumberRoute" Type="int" Nullable="false" />
+    <Property Name="FirstStation" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="LastStation" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Mileage" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_NumberRoute">
+    <End Role="Route" Type="Self.Route" Multiplicity="1" />
+    <End Role="Driver" Type="Self.Driver" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Route">
+        <PropertyRef Name="ID_Route" />
+      </Principal>
+      <Dependent Role="Driver">
+        <PropertyRef Name="NumberRoute_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище BusStationModelContainer">
+    <EntitySet Name="Driver" EntityType="Self.Driver" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Route" EntityType="Self.Route" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_NumberRoute" Association="Self.FK_NumberRoute">
+      <End Role="Route" EntitySet="Route" />
+      <End Role="Driver" EntitySet="Driver" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

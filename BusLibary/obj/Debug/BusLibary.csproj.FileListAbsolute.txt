@@ -1,0 +1,6 @@
+D:\ProjectC#\BusLibary\bin\Debug\BusLibary.dll
+D:\ProjectC#\BusLibary\bin\Debug\BusLibary.pdb
+D:\ProjectC#\BusLibary\obj\Debug\BusLibary.csproj.AssemblyReference.cache
+D:\ProjectC#\BusLibary\obj\Debug\BusLibary.csproj.CoreCompileInputs.cache
+D:\ProjectC#\BusLibary\obj\Debug\BusLibary.dll
+D:\ProjectC#\BusLibary\obj\Debug\BusLibary.pdb

@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "a5290d0f-06d6-4a4d-997e-a7e2d91022f3": {
+      "ProjectGuid": "a5290d0f-06d6-4a4d-997e-a7e2d91022f3",
+      "DisplayName": "ZAPROS",
+      "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Прочие файлы",
+      "ColorIndex": -1
+    }
+  },
+  "NextColorIndex": 1
+}

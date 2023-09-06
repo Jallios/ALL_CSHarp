@@ -1,0 +1,221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище BDModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Book_Storage">
+    <Key>
+      <PropertyRef Name="ID_Book_Storage" />
+    </Key>
+    <Property Name="ID_Book_Storage" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Num_Storage" Type="int" Nullable="false" />
+    <Property Name="Category" Type="varchar" MaxLength="200" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="ID_Employee" />
+    </Key>
+    <Property Name="ID_Employee" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Full_Name_Emp" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Employee_Login" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Employee_Password" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Reading_Room_ID_E" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Libary">
+    <Key>
+      <PropertyRef Name="ID_Libary" />
+    </Key>
+    <Property Name="ID_Libary" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Addres" Type="varchar(max)" Nullable="false" />
+    <Property Name="Num_Libary" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reader">
+    <Key>
+      <PropertyRef Name="ID_Reader" />
+    </Key>
+    <Property Name="ID_Reader" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Full_Name_Reader" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Reader_Birth" Type="date" Nullable="false" />
+    <Property Name="Reader_Login" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Reader_Password" Type="varchar" MaxLength="25" Nullable="false" />
+    <Property Name="Reader_Category_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reader_Category">
+    <Key>
+      <PropertyRef Name="ID_Reader_Category" />
+    </Key>
+    <Property Name="ID_Reader_Category" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name_Category" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Brief_Description" Type="varchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reading_Room">
+    <Key>
+      <PropertyRef Name="ID_Reading_Room" />
+    </Key>
+    <Property Name="ID_Reading_Room" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Num_Room" Type="int" Nullable="false" />
+    <Property Name="Libary_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reading_Room_Readers">
+    <Key>
+      <PropertyRef Name="ID_Reading_Room_Readers" />
+    </Key>
+    <Property Name="ID_Reading_Room_Readers" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Reader_ID_RRR" Type="int" Nullable="false" />
+    <Property Name="Reading_Room_ID_RRR" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ReadRoom_Storage">
+    <Key>
+      <PropertyRef Name="ID_ReadRoom_Storage" />
+    </Key>
+    <Property Name="ID_ReadRoom_Storage" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Book_Storage_ID" Type="int" Nullable="false" />
+    <Property Name="Reading_Room_ID_RRS" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Subscription">
+    <Key>
+      <PropertyRef Name="ID_Subscription" />
+    </Key>
+    <Property Name="ID_Subscription" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Num_Subscription" Type="int" Nullable="false" />
+    <Property Name="Start_Of_Use" Type="date" Nullable="false" />
+    <Property Name="End_Of_Use" Type="date" Nullable="false" />
+    <Property Name="Reader_ID_S" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Book_Storage">
+    <End Role="Book_Storage" Type="Self.Book_Storage" Multiplicity="1" />
+    <End Role="ReadRoom_Storage" Type="Self.ReadRoom_Storage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book_Storage">
+        <PropertyRef Name="ID_Book_Storage" />
+      </Principal>
+      <Dependent Role="ReadRoom_Storage">
+        <PropertyRef Name="Book_Storage_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Libary">
+    <End Role="Libary" Type="Self.Libary" Multiplicity="1" />
+    <End Role="Reading_Room" Type="Self.Reading_Room" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Libary">
+        <PropertyRef Name="ID_Libary" />
+      </Principal>
+      <Dependent Role="Reading_Room">
+        <PropertyRef Name="Libary_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reader_Category">
+    <End Role="Reader_Category" Type="Self.Reader_Category" Multiplicity="1" />
+    <End Role="Reader" Type="Self.Reader" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reader_Category">
+        <PropertyRef Name="ID_Reader_Category" />
+      </Principal>
+      <Dependent Role="Reader">
+        <PropertyRef Name="Reader_Category_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reader_RRR">
+    <End Role="Reader" Type="Self.Reader" Multiplicity="1" />
+    <End Role="Reading_Room_Readers" Type="Self.Reading_Room_Readers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reader">
+        <PropertyRef Name="ID_Reader" />
+      </Principal>
+      <Dependent Role="Reading_Room_Readers">
+        <PropertyRef Name="Reader_ID_RRR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reader_S">
+    <End Role="Reader" Type="Self.Reader" Multiplicity="1" />
+    <End Role="Subscription" Type="Self.Subscription" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reader">
+        <PropertyRef Name="ID_Reader" />
+      </Principal>
+      <Dependent Role="Subscription">
+        <PropertyRef Name="Reader_ID_S" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reading_Room">
+    <End Role="Reading_Room" Type="Self.Reading_Room" Multiplicity="1" />
+    <End Role="ReadRoom_Storage" Type="Self.ReadRoom_Storage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reading_Room">
+        <PropertyRef Name="ID_Reading_Room" />
+      </Principal>
+      <Dependent Role="ReadRoom_Storage">
+        <PropertyRef Name="Reading_Room_ID_RRS" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reading_Room_E">
+    <End Role="Reading_Room" Type="Self.Reading_Room" Multiplicity="1" />
+    <End Role="Employee" Type="Self.Employee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reading_Room">
+        <PropertyRef Name="ID_Reading_Room" />
+      </Principal>
+      <Dependent Role="Employee">
+        <PropertyRef Name="Reading_Room_ID_E" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Reading_Room_RRR">
+    <End Role="Reading_Room" Type="Self.Reading_Room" Multiplicity="1" />
+    <End Role="Reading_Room_Readers" Type="Self.Reading_Room_Readers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reading_Room">
+        <PropertyRef Name="ID_Reading_Room" />
+      </Principal>
+      <Dependent Role="Reading_Room_Readers">
+        <PropertyRef Name="Reading_Room_ID_RRR" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище BDModelContainer">
+    <EntitySet Name="Book_Storage" EntityType="Self.Book_Storage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Libary" EntityType="Self.Libary" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reader" EntityType="Self.Reader" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reader_Category" EntityType="Self.Reader_Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reading_Room" EntityType="Self.Reading_Room" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reading_Room_Readers" EntityType="Self.Reading_Room_Readers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ReadRoom_Storage" EntityType="Self.ReadRoom_Storage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Subscription" EntityType="Self.Subscription" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_Book_Storage" Association="Self.FK_Book_Storage">
+      <End Role="Book_Storage" EntitySet="Book_Storage" />
+      <End Role="ReadRoom_Storage" EntitySet="ReadRoom_Storage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Libary" Association="Self.FK_Libary">
+      <End Role="Libary" EntitySet="Libary" />
+      <End Role="Reading_Room" EntitySet="Reading_Room" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reader_Category" Association="Self.FK_Reader_Category">
+      <End Role="Reader_Category" EntitySet="Reader_Category" />
+      <End Role="Reader" EntitySet="Reader" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reader_RRR" Association="Self.FK_Reader_RRR">
+      <End Role="Reader" EntitySet="Reader" />
+      <End Role="Reading_Room_Readers" EntitySet="Reading_Room_Readers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reader_S" Association="Self.FK_Reader_S">
+      <End Role="Reader" EntitySet="Reader" />
+      <End Role="Subscription" EntitySet="Subscription" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reading_Room" Association="Self.FK_Reading_Room">
+      <End Role="Reading_Room" EntitySet="Reading_Room" />
+      <End Role="ReadRoom_Storage" EntitySet="ReadRoom_Storage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reading_Room_E" Association="Self.FK_Reading_Room_E">
+      <End Role="Reading_Room" EntitySet="Reading_Room" />
+      <End Role="Employee" EntitySet="Employee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Reading_Room_RRR" Association="Self.FK_Reading_Room_RRR">
+      <End Role="Reading_Room" EntitySet="Reading_Room" />
+      <End Role="Reading_Room_Readers" EntitySet="Reading_Room_Readers" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

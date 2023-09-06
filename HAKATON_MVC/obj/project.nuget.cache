@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "Ikfo9QVL2ABPbwO32ThcaBD+ZKNQTLhaxpN8xDqm3reDp1WAH5H9Ifdscv3oxBkdZXboQPTb7p6uE5LoRQD5bw==",
+  "success": true,
+  "projectFilePath": "D:\\ProjectC#\\HAKATON_MVC\\HAKATON_MVC.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\ffuruff\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.14.0\\microsoft.visualstudio.azure.containers.tools.targets.1.14.0.nupkg.sha512"
+  ],
+  "logs": []
+}

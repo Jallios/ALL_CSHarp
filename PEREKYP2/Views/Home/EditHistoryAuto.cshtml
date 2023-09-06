@@ -1,0 +1,23 @@
+﻿@model PEREKYP2.Models.HistoryAuto
+@{
+	ViewData["Title"] = "Edit";
+}
+<h1>Edit</h1>
+<h4>Users</h4>
+<hr />
+	<form asp-action="EditHistoryAuto">
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<input type="hidden" asp-for="IdHistoryAuto"/>
+		<div class="from-group">
+			<label asp-for="Milleage" class="control-label"></label>
+			<input asp-for="Milleage" class="form-control"/>
+			<label asp-for="Accidents" class="control-label"></label>
+			<input asp-for="Accidents" class="form-control"/>
+		</div>
+		<div class="form-group">
+			<input type="submit" value="Save" class="btn btn-primary"/>
+		</div>
+	</form>
+	<div>
+		<a asp-action="Admin">Back to List</a>
+	</div>

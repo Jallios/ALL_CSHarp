@@ -1,0 +1,19 @@
+﻿@model PEREKYP2.Models.PurchaseStatus
+@{
+
+	ViewBag.Title = "Добавление статуса сделки";
+	<form asp-action = "CreatePurchaseStatus" asp-controller = "home">
+		<div class = "form-group">
+		<label asp-for="PurchaseStatus1" class="label-control">Статус сделки</label>
+		<input asp-for="PurchaseStatus1" type="text" class = "form-control"/>
+		<label asp-for="AutoId" class="label-control">Код машины</label>
+		<input asp-for="AutoId" type="text" class = "form-control"/>
+		<label asp-for="UserId" class="label-control">Код пользователя</label>
+		<input asp-for="UserId" type="text" class = "form-control"/>
+		</div>
+		<div class = "form-group">
+		<input  type="submit" class = "btn btn-dark"/>
+		</div>
+	</form>
+
+}

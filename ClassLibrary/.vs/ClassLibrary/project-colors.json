@@ -1,0 +1,21 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "59c170e3-056a-4c21-aeb8-77fbfd1bc47f": {
+      "ProjectGuid": "59c170e3-056a-4c21-aeb8-77fbfd1bc47f",
+      "DisplayName": "ClassLibrary",
+      "ColorIndex": 0
+    },
+    "8647df35-9ab9-433d-97f9-dae18e659a65": {
+      "ProjectGuid": "8647df35-9ab9-433d-97f9-dae18e659a65",
+      "DisplayName": "EducationalInstitutionTest",
+      "ColorIndex": 1
+    },
+    "9e0f0ed2-8f44-44f2-bb3a-b471a723fd60": {
+      "ProjectGuid": "9e0f0ed2-8f44-44f2-bb3a-b471a723fd60",
+      "DisplayName": "EducationalInstitution",
+      "ColorIndex": 2
+    }
+  },
+  "NextColorIndex": 3
+}

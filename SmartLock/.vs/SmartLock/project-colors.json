@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "eb055ddb-31f1-4039-bb07-b0d6fda14c12": {
+      "ProjectGuid": "eb055ddb-31f1-4039-bb07-b0d6fda14c12",
+      "DisplayName": "SmartLock",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

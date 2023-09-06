@@ -1,0 +1,21 @@
+﻿@model TEST.Models.TestAuto
+@{
+	ViewData["Title"] = "Edit";
+}
+<h1>Edit</h1>
+<h4>Users</h4>
+<hr />
+	<form asp-action="Edit">
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<input type="hidden" asp-for="IdTestAuto"/>
+		<div class="from-group">
+			<label asp-for="Milleage" class="control-label"></label>
+			<input asp-for="Milleage" class="form-control"/>
+		</div>
+		<div class="form-group">
+			<input type="submit" value="Save" class="btn btn-primary"/>
+		</div>
+	</form>
+	<div>
+		<a asp-action="Index">Back to List</a>
+	</div>

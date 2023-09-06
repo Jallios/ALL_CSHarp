@@ -1,0 +1,42 @@
+﻿@{
+	Layout = null;
+}
+@model IEnumerable<PEREKYP2.Models.Auto>
+<head>
+    <link href="~/css/AUTO.css" rel="stylesheet" />
+    <title>Авто</title>
+</head>
+<body background = "../img/1493750621_imagesbase.ru-5759.jpg">
+    <div id="header">
+        <img src="../img/zamow-serwis.png"/>
+    </div>
+    <div class="navigathion">
+        <input type="search" placeholder = "Поиск">
+            <a class="btn btn-primary" href="@Url.Action("FIRSTPAGE")">Главная</a>
+            <a class="btn btn-primary" href="@Url.Action("Support")">Поддержка</a>
+    </div>
+    <div class="main" style="font-size: 20px; padding-left: 2%;">
+    
+
+    @foreach (var item in Model)
+    {
+        <ul class="card-wrapper">
+            <li class="card">
+            @item.Brand
+             @item.IdHistoryAuto
+              @item.BodyType
+               @item.Kpp
+                @item.EnginePower
+                 @item.DriveUnit
+                  @item.WeightKg
+                   @item.YearOfIssue
+            </li>
+        </ul>
+    }
+    </div>
+    <div id="footer" style="text-align: center;">
+        &copy; Все права защищены
+    </div>
+    
+</body>
+</html>

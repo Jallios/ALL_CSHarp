@@ -1,0 +1,29 @@
+﻿@model PEREKYP2.Models.User
+@{
+
+	ViewBag.Title = "Добавление автомобиля";
+	<form asp-action = "CreateUser" asp-controller = "home">
+		<div class = "form-group">
+		<label asp-for="NameUser" class="label-control">Имя пользователя</label>
+		<input asp-for="NameUser" type="text" class = "form-control"/>
+		<label asp-for="SurnameUser" class="label-control">Фамилия пользователя</label>
+		<input asp-for="SurnameUser" type="text" class = "form-control"/>
+		<label asp-for="PatronymicUser" class="label-control">Отчество пользователя</label>
+		<input asp-for="PatronymicUser" type="text" class = "form-control"/>
+		<label asp-for="SeriNumUser" class="label-control">Серия и номер паспорта</label>
+		<input asp-for="SeriNumUser" type="text" class = "form-control"/>
+		<label asp-for="MobileNumberUser" class="label-control">Мобильный телефон</label>
+		<input asp-for="MobileNumberUser" type="text" class = "form-control"/>
+		<label asp-for="LoginUser" class="label-control">Логин пользователя</label>
+		<input asp-for="LoginUser" type="text" class = "form-control"/>
+		<label asp-for="PasswordUser" class="label-control">Пароль пользователя</label>
+		<input asp-for="PasswordUser" type="text" class = "form-control"/>
+		<label asp-for="UserRoleId" class="label-control">Код роли пользователя</label>
+		<input asp-for="UserRoleId" type="text" class = "form-control"/>
+		</div>
+		<div class = "form-group">
+		<input  type="submit" class = "btn btn-dark"/>
+		</div>
+	</form>
+
+}

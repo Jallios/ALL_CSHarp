@@ -1,0 +1,36 @@
+﻿@model PEREKYP2.Models.User
+@{
+	ViewData["Title"] = "Edit";
+}
+<h1>Edit</h1>
+<h4>Users</h4>
+<hr />
+	<form asp-action="EditUser">
+		<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+		<input type="hidden" asp-for="IdUser"/>
+		<div class="from-group">
+			<label asp-for="NameUser" class="control-label"></label>
+			<input asp-for="NameUser" class="form-control"/>
+			<label asp-for="SurnameUser" class="control-label"></label>
+			<input asp-for="SurnameUser" class="form-control"/>
+			<label asp-for="PatronymicUser" class="control-label"></label>
+			<input asp-for="PatronymicUser" class="form-control"/>
+			<label asp-for="SeriNumUser" class="control-label"></label>
+			<input asp-for="SeriNumUser" class="form-control"/>
+			<label asp-for="MobileNumberUser" class="control-label"></label>
+			<input asp-for="MobileNumberUser" class="form-control"/>
+			<label asp-for="LoginUser" class="control-label"></label>
+			<input asp-for="LoginUser" class="form-control"/>
+			<label asp-for="PasswordUser" class="control-label"></label>
+			<input asp-for="PasswordUser" class="form-control"/>
+			<label asp-for="UserRoleId" class="control-label"></label>
+			<input asp-for="UserRoleId" class="form-control"/>
+
+		</div>
+		<div class="form-group">
+			<input type="submit" value="Save" class="btn btn-primary"/>
+		</div>
+	</form>
+	<div>
+		<a asp-action="Admin">Back to List</a>
+	</div>

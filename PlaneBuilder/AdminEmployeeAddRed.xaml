@@ -1,0 +1,45 @@
+﻿<Window x:Class="PlaneBuilder.AdminEmployeeAddRed"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PlaneBuilder"
+        mc:Ignorable="d"
+        Title="AdminEmployeeAddRed" Height="450" Width="400" IsVisibleChanged="Window_IsVisibleChanged">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="2">
+            <Label Content="Фамилия:" HorizontalAlignment="Right" FontSize="11"/>
+            <Label Content="Имя:" HorizontalAlignment="Right" FontSize="11"/>
+            <Label Content="Отчество:" HorizontalAlignment="Right" FontSize="11"/>
+            <Label Content="Зарплата:" HorizontalAlignment="Right" FontSize="11"/>
+            <Label Content="Логин:" HorizontalAlignment="Right" FontSize="11"/>
+            <Label Content="Пароль:" HorizontalAlignment="Right" FontSize="11"/>
+            <Label Content="Статус:" HorizontalAlignment="Right" FontSize="11"/>
+            <Label Content="Бригада:" HorizontalAlignment="Right" FontSize="11"/>
+            <Label Content="Лабаротория:" HorizontalAlignment="Right" FontSize="11"/>
+            <Label Content="Должность:" HorizontalAlignment="Right" FontSize="11"/>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1" Grid.RowSpan="2">
+            <TextBox Text="{Binding Surname_Employee}" Height="25" x:Name="Surname"/>
+            <TextBox Text="{Binding Name_Employee}" Height="25" x:Name="Name"/>
+            <TextBox Text="{Binding Patronymic_Employee}" Height="25" x:Name="Patronymic"/>
+            <TextBox Text="{Binding Salary_Employee}" Height="25" x:Name="Salary"/>
+            <TextBox Text="{Binding Login_Employee}" Height="25" x:Name="Login"/>
+            <TextBox Text="{Binding Password_Employee}" Height="25" x:Name="Password"/>
+            <TextBox Text="{Binding Status_Employee}" Height="25" x:Name="Status"/>
+            <ComboBox SelectedItem="{Binding Brigade}" Height="25" x:Name="Brigade" DisplayMemberPath="ID_Brigade"/>
+            <ComboBox SelectedItem="{Binding Research_Laboratory}" Height="25" x:Name="Research" DisplayMemberPath="Name_Laboratory"/>
+            <ComboBox SelectedItem="{Binding Post}" Height="25" x:Name="Post" DisplayMemberPath="Name_Post"/>
+        </StackPanel>
+        <Button x:Name="Save" Grid.Column="0" Grid.Row="1" Height="30" Content="Сохранить" Grid.ColumnSpan="2" Click="Save_Click"/>
+        <Button x:Name="Back" Grid.Column="0" Grid.Row="1" Height="30" Content="Назад" Grid.ColumnSpan="2" VerticalAlignment="Bottom" Click="Back_Click"/>
+    </Grid>
+</Window>

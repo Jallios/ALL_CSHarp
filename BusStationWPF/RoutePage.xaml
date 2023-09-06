@@ -1,0 +1,33 @@
+﻿<Window x:Class="BusStationClass.RoutePage"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BusStationClass"
+        mc:Ignorable="d"
+        Title="RoutePage" Height="350" Width="400" IsVisibleChanged="Window_IsVisibleChanged">
+    <Grid Background="DarkGray">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="0">
+            <Label Content="№ Маршрута:" Height="45"/>
+            <Label Content="Первая станция:" Height="45"/>
+            <Label Content="Последняя станция:" Height="45"/>
+            <Label Content="Километраж:" Height="45"/>
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBox x:Name="NumberRoute" Height="40" Text="{Binding NumberRoute}"/>
+            <TextBox x:Name="FirstStation" Height="40" Text="{Binding FirstStation}"/>
+            <TextBox x:Name="LastStation" Height="40" Text="{Binding LastStation}"/>
+            <TextBox x:Name="Mileage" Height="40" Text="{Binding Mileage}"/>
+        </StackPanel>
+        <Button x:Name="Save" Grid.Column="0" Grid.Row="1" Height="30" Content="Сохранить" Grid.ColumnSpan="2" Click="Save_Click" />
+        <Button x:Name="Back" Grid.Column="0" Grid.Row="1" Height="30" Content="Назад" Grid.ColumnSpan="2" Click="Back_Click" VerticalAlignment="Bottom"/>
+    </Grid>
+</Window>

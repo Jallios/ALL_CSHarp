@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "47a2722f-73a0-4400-8b02-d3e166c094aa": {
+      "ProjectGuid": "47a2722f-73a0-4400-8b02-d3e166c094aa",
+      "DisplayName": "Diskriminant",
+      "ColorIndex": 0
+    },
+    "4d167d3c-1acc-45c2-9138-5a80a1281473": {
+      "ProjectGuid": "4d167d3c-1acc-45c2-9138-5a80a1281473",
+      "DisplayName": "Class",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}

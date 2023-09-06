@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9fb3a7e9ea3443fd9e4bbb41f1d5e9da" Name="Diagram1">
+        <EntityTypeShape EntityType="BDModel.Book_Storage" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDModel.Employee" Width="1.5" PointX="5.25" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDModel.Libary" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDModel.Reader" Width="1.5" PointX="3" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDModel.Reader_Category" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDModel.Reading_Room" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDModel.Reading_Room_Readers" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDModel.ReadRoom_Storage" Width="1.5" PointX="5.25" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="BDModel.Subscription" Width="1.5" PointX="5.25" PointY="9.75" IsExpanded="true" />
+        <AssociationConnector Association="BDModel.FK_Book_Storage" ManuallyRouted="false" />
+        <AssociationConnector Association="BDModel.FK_Reading_Room_E" ManuallyRouted="false" />
+        <AssociationConnector Association="BDModel.FK_Libary" ManuallyRouted="false" />
+        <AssociationConnector Association="BDModel.FK_Reader_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="BDModel.FK_Reader_RRR" ManuallyRouted="false" />
+        <AssociationConnector Association="BDModel.FK_Reader_S" ManuallyRouted="false" />
+        <AssociationConnector Association="BDModel.FK_Reading_Room" ManuallyRouted="false" />
+        <AssociationConnector Association="BDModel.FK_Reading_Room_RRR" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

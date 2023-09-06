@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище BusStationModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Driver">
+          <Key>
+            <PropertyRef Name="ID_Driver" />
+          </Key>
+          <Property Name="ID_Driver" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Surname" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Patronymic" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="NumberRoute_ID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Route">
+          <Key>
+            <PropertyRef Name="ID_Route" />
+          </Key>
+          <Property Name="ID_Route" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="NumberRoute" Type="int" Nullable="false" />
+          <Property Name="FirstStation" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="LastStation" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Mileage" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_NumberRoute">
+          <End Role="Route" Type="Self.Route" Multiplicity="1" />
+          <End Role="Driver" Type="Self.Driver" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Route">
+              <PropertyRef Name="ID_Route" />
+            </Principal>
+            <Dependent Role="Driver">
+              <PropertyRef Name="NumberRoute_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище BusStationModelContainer">
+          <EntitySet Name="Driver" EntityType="Self.Driver" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Route" EntityType="Self.Route" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_NumberRoute" Association="Self.FK_NumberRoute">
+            <End Role="Route" EntitySet="Route" />
+            <End Role="Driver" EntitySet="Driver" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="BusStationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Driver">
+          <Key>
+            <PropertyRef Name="ID_Driver" />
+          </Key>
+          <Property Name="ID_Driver" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Patronymic" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="NumberRoute_ID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Route" Relationship="Self.FK_NumberRoute" FromRole="Driver" ToRole="Route" />
+        </EntityType>
+        <EntityType Name="Route">
+          <Key>
+            <PropertyRef Name="ID_Route" />
+          </Key>
+          <Property Name="ID_Route" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NumberRoute" Type="Int32" Nullable="false" />
+          <Property Name="FirstStation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastStation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Mileage" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Driver" Relationship="Self.FK_NumberRoute" FromRole="Route" ToRole="Driver" />
+        </EntityType>
+        <Association Name="FK_NumberRoute">
+          <End Role="Route" Type="Self.Route" Multiplicity="1" />
+          <End Role="Driver" Type="Self.Driver" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Route">
+              <PropertyRef Name="ID_Route" />
+            </Principal>
+            <Dependent Role="Driver">
+              <PropertyRef Name="NumberRoute_ID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="BusStationEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Driver" EntityType="Self.Driver" />
+          <EntitySet Name="Route" EntityType="Self.Route" />
+          <AssociationSet Name="FK_NumberRoute" Association="Self.FK_NumberRoute">
+            <End Role="Route" EntitySet="Route" />
+            <End Role="Driver" EntitySet="Driver" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище BusStationModelContainer" CdmEntityContainer="BusStationEntities">
+          <EntitySetMapping Name="Driver">
+            <EntityTypeMapping TypeName="BusStationModel.Driver">
+              <MappingFragment StoreEntitySet="Driver">
+                <ScalarProperty Name="ID_Driver" ColumnName="ID_Driver" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Surname" ColumnName="Surname" />
+                <ScalarProperty Name="Patronymic" ColumnName="Patronymic" />
+                <ScalarProperty Name="NumberRoute_ID" ColumnName="NumberRoute_ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Route">
+            <EntityTypeMapping TypeName="BusStationModel.Route">
+              <MappingFragment StoreEntitySet="Route">
+                <ScalarProperty Name="ID_Route" ColumnName="ID_Route" />
+                <ScalarProperty Name="NumberRoute" ColumnName="NumberRoute" />
+                <ScalarProperty Name="FirstStation" ColumnName="FirstStation" />
+                <ScalarProperty Name="LastStation" ColumnName="LastStation" />
+                <ScalarProperty Name="Mileage" ColumnName="Mileage" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

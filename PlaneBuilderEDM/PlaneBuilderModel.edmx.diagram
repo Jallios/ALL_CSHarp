@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="4eb1d7f53b904df08417689bd4b7e854" Name="Diagram1">
+        <EntityTypeShape EntityType="PlaneBuilderModel.Appointment_Research_Laboratory" Width="1.5" PointX="0.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Area" Width="1.5" PointX="1.5" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Brigade" Width="1.5" PointX="3" PointY="14.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Employee" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Employee_History" Width="1.5" PointX="7.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Manufacturing_History" Width="1.5" PointX="8.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Manufacturing_Process" Width="1.5" PointX="0.75" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Material" Width="1.5" PointX="6" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Post" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Product" Width="1.5" PointX="8.25" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Product_Type" Width="1.5" PointX="6" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Research" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Research_Laboratory" Width="1.5" PointX="3" PointY="6.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Result_Research" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Status_Research" Width="1.5" PointX="3" PointY="10.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="PlaneBuilderModel.Workshop" Width="1.5" PointX="0.75" PointY="15.625" IsExpanded="true" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Appointment" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Area" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Brigade" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Process" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Workshop" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Laboratory_E" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Post" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Material" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Workshop_M" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Laboratory" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Laboratory_R" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Result" ManuallyRouted="false" />
+        <AssociationConnector Association="PlaneBuilderModel.FK_Status" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

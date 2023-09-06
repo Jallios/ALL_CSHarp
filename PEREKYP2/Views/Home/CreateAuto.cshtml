@@ -1,0 +1,29 @@
+﻿@model PEREKYP2.Models.Auto
+@{
+
+	ViewBag.Title = "Добавление автомобиля";
+	<form asp-action = "CreateAuto" asp-controller = "home">
+		<div class = "form-group">
+		<label asp-for="Brand" class="label-control">Марка</label>
+		<input asp-for="Brand" type="text" class = "form-control"/>
+		<label asp-for="IdHistoryAuto" class="label-control">Код истории</label>
+		<input asp-for="IdHistoryAuto" type="text" class = "form-control"/>
+		<label asp-for="BodyType" class="label-control">Тип кузова</label>
+		<input asp-for="BodyType" type="text" class = "form-control"/>
+		<label asp-for="Kpp" class="label-control">Коробка передач</label>
+		<input asp-for="Kpp" type="text" class = "form-control"/>
+		<label asp-for="EnginePower" class="label-control">Мощность двигателя</label>
+		<input asp-for="EnginePower" type="text" class = "form-control"/>
+		<label asp-for="DriveUnit" class="label-control">Привод</label>
+		<input asp-for="DriveUnit" type="text" class = "form-control"/>
+		<label asp-for="WeightKg" class="label-control">Масса</label>
+		<input asp-for="WeightKg" type="text" class = "form-control"/>
+		<label asp-for="YearOfIssue" class="label-control">Дата выпуска</label>
+		<input asp-for="YearOfIssue" type="text" class = "form-control"/>
+		</div>
+		<div class = "form-group">
+		<input  type="submit" class = "btn btn-dark"/>
+		</div>
+	</form>
+
+}

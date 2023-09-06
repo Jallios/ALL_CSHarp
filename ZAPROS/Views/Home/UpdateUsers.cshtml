@@ -1,0 +1,83 @@
+﻿@model ZAPROS.Models.User
+@{
+    Layout = "_Layout"; ViewBag.Title = "Update a User";
+}
+
+<h2>Update a User <a asp-action="Index" class="btn btn-sm btn-secondary">Back</a></h2>
+<form method="post">
+    <div class="form-group">
+        <label asp-for="IdUser"></label>
+        <input class="form-control" asp-for="IdUser" readonly />
+    </div>
+    <div class="form-group">
+        <label asp-for="SurnameUser"></label>
+        <input class="form-control" asp-for="SurnameUser"  />
+    </div>
+    <div class="form-group">
+        <label asp-for="NameUser"></label>
+        <input class="form-control" asp-for="NameUser"  />
+    </div>
+    <div class="form-group">
+        <label asp-for="PatronymicUser"></label>
+        <input class="form-control" asp-for="PatronymicUser"  />
+    </div>
+    <div class="form-group">
+        <label asp-for="SeriNumUser"></label>
+        <input class="form-control" asp-for="SeriNumUser"  />
+    </div>
+    <div class="form-group">
+        <label asp-for="MobileNumberUser"></label>
+        <input class="form-control" asp-for="MobileNumberUser"  />
+    </div>
+    <div class="form-group">
+        <label asp-for="LoginUser"></label>
+        <input class="form-control" asp-for="LoginUser" readonly/>
+    </div>
+    <div class="form-group">
+        <label asp-for="PasswordUser"></label>
+        <input class="form-control" asp-for="PasswordUser" readonly/>
+    </div>
+    <div class="form-group">
+        <label asp-for="UserRoleId"></label>
+        <input class="form-control" asp-for="UserRoleId" />
+    </div>
+    <div class="text-center panel-body">
+        <button type="submit" class="btn btn-sm btn-primary">Update</button>
+    </div>
+</form>
+
+@if (ViewBag.Result == "Success")
+{
+    @if (Model != null)
+    {
+        <h2>User</h2>
+        <table class="table table-sm table-striped table-bordered m-2">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>SurnameUser</th>
+                    <th>NameUser</th>
+                    <th>PatronymicUser</th>
+                    <th>SeriNumUser</th>
+                    <th>MobileNumberUser</th>
+                    <th>LoginUser</th>
+                    <th>PasswordUser</th>
+                    <th>UserRoleId</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                     <td>@Model.IdUser</td>
+                    <td>@Model.SurnameUser</td>
+                    <td>@Model.NameUser</td>
+                    <td>@Model.PatronymicUser</td>
+                    <td>@Model.SeriNumUser</td>
+                    <td>@Model.MobileNumberUser</td>
+                    <td>@Model.LoginUser</td>
+                    <td>@Model.PasswordUser</td>
+                     <td>@Model.UserRoleId</td>
+                </tr>
+            </tbody>
+        </table>
+    }
+}
